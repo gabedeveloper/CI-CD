@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - "10.0.0"
+before_install:
+  - npm i
+  - node -v && npm -v
+services:
+  - mongodb
+env:
+  - LAIKA_OPTIONS="-t 5000"
