@@ -1,0 +1,11 @@
+image: 'node:10.0.0'
+
+before_script:
+  - apt-get update -qq && apt-get install -y -qq sqlite3 libsqlite3-dev nodejs
+  - node -v && npm -v
+  - witch node
+
+all_tests:
+  script:
+   - npm install
+   - node ./user.js
